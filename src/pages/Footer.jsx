@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, Divider } from '@heroui/react';
 import { Icon } from '@iconify/react';
 
 const Footer = () => {

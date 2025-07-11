@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Card, CardBody, Progress, Tooltip } from '@heroui/react';
 import { Icon } from '@iconify/react';
 import { skills } from '../store/skills'; // Ensure this file exports a JS object
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router";
 import Home from "./pages/Home";
 
 import { ProjectSection } from "./pages/ProjectSection";
