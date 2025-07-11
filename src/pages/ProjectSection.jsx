@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Card, CardBody, CardFooter, Button, Tooltip, Badge } from '@heroui/react';
 import { Icon } from '@iconify/react';
 import ProjectModal from './ProjectModal'; // Ensure this file exists and is default exported
-import { projects } from '../data/projects'; // Ensure this file exists and is properly structured
+import { projects } from '../store/Projects'; // Ensure this file exists and is properly structured
 
 const ProjectSection = () => {
   const [selectedProject, setSelectedProject] = useState(null);
