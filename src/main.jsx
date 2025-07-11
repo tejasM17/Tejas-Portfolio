@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'; // ✅ This line is critical for Tailwind to work
 import App from './App.jsx'
-import {BrowserRouter, Routes, Route} from 'react-router'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import ListArticles from './pages/aticlepdf/ListArticles.jsx';
 
