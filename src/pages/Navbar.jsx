@@ -36,12 +36,11 @@ export const Navbar = () => {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-2"
           >
-            <div className="w-8 h-8 rounded-md bg-gradient-to-tr from-yellow-400 via-pink-500 to-cyan-400 flex items-center justify-center shadow-inner">
-              <span className="font-bold text-black text-sm">&lt;/&gt;</span>
-            </div>
-            <p className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#e9f0f0] via-[#ff00ff] to-[#ff9900] animate-gradient bg-[length:400%_400%]">
-              DEV.MATRIX
-            </p>
+            
+            <Icon className="text-white drop-shadow-[0_0_6px_#00f0ff]"
+ 
+            icon="simple-icons:bmw" width="32" height="32" />
+
           </motion.div>
         </NavbarBrand>
 

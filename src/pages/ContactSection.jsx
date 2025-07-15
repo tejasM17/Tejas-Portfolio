@@ -1,40 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import { motion } from 'framer-motion';
-import { Card, CardBody, Input, Textarea, Button, Link } from '@heroui/react';
 import { Icon } from '@iconify/react';
-import { addToast } from '@heroui/react';
+import EmailSentNotification from './ui/Email';
+import emailjs from '@emailjs/browser';        //npm install @emailjs/browser
+
 
 export const ContactSection = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
+  const [showNotification, setShowNotification] = useState(false);
 
-    const subject = encodeURIComponent(formData.get('subject') || 'Contact from Portfolio');
-    const name = encodeURIComponent(formData.get('name') || '');
-    const email = encodeURIComponent(formData.get('email') || '');
-    const message = encodeURIComponent(formData.get('message') || '');
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const form = e.target;
 
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nMessage: ${message}\n\n`
-    );
-
-    window.open(`mailto:tejas9380@gmail.com?subject=${subject}&body=${body}`);
-
-    addToast({
-      title: "Message Prepared!",
-      description: "Your email client has been opened with your message.",
-      color: "success",
-    });
-
+  emailjs.sendForm(
+    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    form,
+    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+  )
+  .then(() => {
+    setShowNotification(true); // 🌟 Show notification
     form.reset();
-  };
+  })
+  .catch((error) => {
+    console.error("EmailJS Error:", error);
+    alert("Something went wrong. Please try again.");
+  });
+};
+
+
+
+<EmailSentNotification show={showNotification} onClose={() => setShowNotification(false)} />
 
   return (
     <section id="contact" className="py-20 px-4 relative overflow-hidden bg-[#0a0a0f]">
   {/* Rainbow Glow Background */}
   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-pink-500/10 via-indigo-500/5 to-transparent z-0"></div>
   <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 z-0"></div>
+
+  <EmailSentNotification show={showNotification} onClose={() => setShowNotification(false)} />
+
 
   <div className="container mx-auto max-w-7xl z-10 relative">
     {/* Header */}
@@ -71,8 +77,7 @@ export const ContactSection = () => {
             <input type="email" name="email" required placeholder="Email"
               className="w-full p-3 rounded-md bg-[#181818] border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 transition" />
           </div>
-          <input type="text" name="subject" placeholder="Subject"
-            className="w-full p-3 rounded-md bg-[#181818] border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 transition" />
+        
           <textarea name="message" required placeholder="Tell me about your project..."
             className="w-full p-3 h-36 rounded-md bg-[#181818] border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 transition resize-none"></textarea>
           <button type="submit"
@@ -83,80 +88,120 @@ export const ContactSection = () => {
       </motion.div>
 
       {/* Contact Info */}
-      <motion.div
-        initial={{ opacity: 0, x: 30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true, amount: 0.2 }}
-        className="bg-[#121212] p-8 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,255,255,0.05)] backdrop-blur-md"
-      >
-        <h3 className="text-2xl font-bold text-cyan-400 mb-6">Contact Information</h3>
+<motion.div
+  initial={{ opacity: 0, x: 30 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.6, delay: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
+  className="bg-[#121212] p-8 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,255,255,0.05)] backdrop-blur-md"
+>
+  <h3 className="text-2xl font-bold text-cyan-400 mb-6">Contact Information</h3>
 
-        <div className="space-y-6 text-white">
-          {[
-            { icon: "lucide:mail", label: "Email", value: "tejas9380@gmail.com", link: "mailto:tejas9380@gmail.com" },
-            { icon: "lucide:phone", label: "Phone", value: "+91 9380933460", link: "tel:+919380933460" },
-            { icon: "lucide:map-pin", label: "Location", value: "Tiptur, Karnataka, India", link: "https://maps.app.goo.gl/nvFhgaCdKvscsVCM7" },
-
-          ].map((item, index) => (
-            <div key={index} className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-[#181818] flex items-center justify-center text-cyan-400">
-                <Icon icon={item.icon} width={20} height={20} />
-              </div>
-              <div>
-                <p className="text-sm text-gray-400">{item.label}</p>
-                {item.link ? (
-                  <a href={item.link} className="text-white hover:text-cyan-400 transition">{item.value}</a>
-                ) : (
-                  <p className="text-white">{item.value}</p>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        
-        {/* Social Links - Colorful and Stylish */}
-<div className="mt-8">
-  <h4 className="text-lg font-semibold mb-4 text-cyan-400">Connect on Socials</h4>
-  <div className="flex flex-wrap gap-4">
+  <div className="space-y-6 text-white">
     {[
-      { icon: "skill-icons:github-dark", label: "GitHub", link: "https://github.com" },
-      { icon: "skill-icons:linkedin", label: "LinkedIn", link: "https://linkedin.com" },
-      { icon: "skill-icons:twitter", label: "Twitter", link: "https://twitter.com" },
-      { icon: "skill-icons:instagram", label: "Instagram", link: "https://instagram.com" },
-    ].map((social, i) => (
-      <a
-        key={i}
-        href={social.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group relative p-3 rounded-full shadow-md transition-all duration-300 hover:scale-110"
-      >
-        <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-tr from-[#1f1f1f] via-[#2d2d2d] to-[#3b3b3b] border border-white/10 group-hover:shadow-[0_0_20px_var(--tw-shadow-color)] shadow-cyan-500/30">
-          <Icon icon={social.icon} width={28} height={28} />
+      {
+        icon: "lucide:mail",
+        label: "Email",
+        value: "tejas9380@gmail.com",
+        link: "mailto:tejas9380@gmail.com",
+      },
+      {
+        icon: "lucide:phone",
+        label: "Phone",
+        value: "+91 9380933460",
+        link: "tel:+919380933460",
+      },
+      {
+        icon: "lucide:map-pin",
+        label: "Location",
+        value: "Tiptur, Karnataka, India",
+        link: "https://maps.app.goo.gl/nvFhgaCdKvscsVCM7",
+      },
+    ].map((item, index) => (
+      <div key={index} className="flex items-start gap-4">
+        <div className="w-10 h-10 rounded-full bg-[#181818] flex items-center justify-center text-cyan-400">
+          <Icon icon={item.icon} width={20} height={20} />
         </div>
-        <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-300 opacity-0 group-hover:opacity-100 transition duration-300">
-          {social.label}
-        </span>
-      </a>
+        <div>
+          <p className="text-sm text-gray-400">{item.label}</p>
+          <a
+            href={item.link}
+            className="text-white hover:text-cyan-400 transition"
+          >
+            {item.value}
+          </a>
+        </div>
+      </div>
     ))}
   </div>
-</div>
 
-
-        {/* Availability */}
-        <div className="mt-8 p-4 bg-[#181818] rounded-lg border border-white/10">
-          <h4 className="text-lg font-semibold text-cyan-400 mb-2">Availability</h4>
-          <p className="text-gray-300 text-sm">
-            Currently available for freelance projects and full-time opportunities.
-          </p>
-          <div className="mt-3 flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-green-500 animate-ping"></span>
-            <span className="text-green-400 text-sm">Available for hire</span>
+  {/* Social Links */}
+  <div className="mt-8">
+    <h4 className="text-lg font-semibold mb-4 text-cyan-400">Connect on Socials</h4>
+    <div className="flex flex-wrap gap-4">
+      {[
+        {
+          icon: "skill-icons:github-dark",
+          label: "GitHub",
+          link: "https://github.com/Tejastejas9380",
+        },
+        {
+          icon: "skill-icons:linkedin",
+          label: "LinkedIn",
+          link: "https://www.linkedin.com/in/tejas-m-9b7385331/",
+        },
+        {
+          icon: "skill-icons:twitter",
+          label: "Twitter",
+          link: "https://x.com/TejasTejas96529",
+        },
+        {
+          icon: "skill-icons:instagram",
+          label: "Instagram",
+          link: "https://www.instagram.com/__tejas__m__/",
+        },
+        {
+          icon: "logos:facebook",
+          label: "Facebook",
+          link: "https://www.facebook.com/people/Tejas-Tejas/pfbid0ajsrajV6mzS4snWuzAD7LacNYQ7z1kVib1TXKjmQhZb4FnMhHDuz24sH6WNo1n7sl/",
+        },
+        {
+          icon: "logos:whatsapp-icon",
+          label: "WhatsApp",
+          link: "https://wa.me/919380933460",
+        },
+      ].map((social, i) => (
+        <a
+          key={i}
+          href={social.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative p-3 rounded-full shadow-md transition-all duration-300 hover:scale-110"
+        >
+          <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-tr from-[#1f1f1f] via-[#2d2d2d] to-[#3b3b3b] border border-white/10 group-hover:shadow-[0_0_20px_var(--tw-shadow-color)] shadow-cyan-500/30">
+            <Icon icon={social.icon} width={28} height={28} />
           </div>
-        </div>
-      </motion.div>
+          <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-300 opacity-0 group-hover:opacity-100 transition duration-300">
+            {social.label}
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  {/* Availability */}
+  <div className="mt-8 p-4 bg-[#181818] rounded-lg border border-white/10">
+    <h4 className="text-lg font-semibold text-cyan-400 mb-2">Availability</h4>
+    <p className="text-gray-300 text-sm">
+      Currently available for freelance projects and full-time opportunities.
+    </p>
+    <div className="mt-3 flex items-center gap-2">
+      <span className="w-3 h-3 rounded-full bg-green-500 animate-ping"></span>
+      <span className="text-green-400 text-sm">Available for hire</span>
+    </div>
+  </div>
+</motion.div>
+
     </div>
   </div>
 </section>
