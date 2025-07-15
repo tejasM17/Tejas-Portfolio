@@ -12,23 +12,23 @@ const Home = () => {
   const cursorRef = useRef(null);
 
   const roles = [
-    "Python Developer",
-    "Fullstack Developer",
-    "App Development",
-    "UI/UX Engineer",
-    "Entrepreneur"
+    'Python Developer',
+    'Fullstack Developer',
+    'App Development',
+    'UI/UX Engineer',
+    'Entrepreneur',
   ];
 
   const currentRole = roles[loopNum % roles.length];
 
   useEffect(() => {
     const handleTyping = () => {
-      const fullText = roles[loopNum % roles.length];
-      setDisplayText(prev => {
-        return isDeleting
+      const fullText = currentRole;
+      setDisplayText((prev) =>
+        isDeleting
           ? fullText.substring(0, prev.length - 1)
-          : fullText.substring(0, prev.length + 1);
-      });
+          : fullText.substring(0, prev.length + 1)
+      );
 
       setTypingSpeed(isDeleting ? 50 : 150);
 
@@ -37,7 +37,7 @@ const Home = () => {
         setIsDeleting(true);
       } else if (isDeleting && displayText === '') {
         setIsDeleting(false);
-        setLoopNum(prev => prev + 1);
+        setLoopNum((prev) => prev + 1);
         setTypingSpeed(150);
       }
     };
@@ -59,53 +59,53 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ... relative flex items-center justify-center py-20 px-4 overflow-hidden"
+      className="min-h-screen w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 relative flex items-center justify-center py-20 px-4 overflow-hidden"
     >
+      {/* Backgrounds */}
       <div className="absolute inset-0 bg-cyberpunk-radial opacity-20 z-0" />
       <div className="absolute inset-0 noise-bg z-0" />
 
-      <div className="container mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-center z-10">
-        {/* Text Content */}
+      <div className="container mx-auto max-w-7xl flex flex-col-reverse lg:flex-row items-center justify-center gap-12 z-10 text-center lg:text-left">
+        {/* Left: Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-col gap-6"
+          className="flex flex-col gap-6 items-center lg:items-start w-full"
         >
-          <div>
-            <motion.p
-              className="text-neon-blue mb-2 font-medium"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
-              &lt; Hello World /&gt;
-            </motion.p>
-            <motion.h1
-              className="text-4xl md:text-6xl font-bold mb-4 glow"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1 }}
-            >
-              I'm <span className="">M TEJAS</span>
-            </motion.h1>
+          <motion.p
+            className="text-neon-blue font-medium"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+          >
+            &lt; Hello World /&gt;
+          </motion.p>
 
-            <motion.div
-              className="h-12 mb-6 flex items-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1.2 }}
-            >
-              <h2 className="text-xl md:text-2xl text-foreground/80 flex items-center">
-                <span className="text-neon-blue mr-2">&gt;</span>
-                <span>{displayText}</span>
-                <span
-                  ref={cursorRef}
-                  className="inline-block w-[3px] h-[24px] bg-neon-blue ml-1"
-                ></span>
-              </h2>
-            </motion.div>
-          </div>
+          <motion.h1
+            className="text-4xl md:text-6xl font-bold mb-2 glow"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+          >
+            I'm <span className="">M TEJAS</span>
+          </motion.h1>
+
+          <motion.div
+            className="h-12 flex items-center justify-center lg:justify-start"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1.2 }}
+          >
+            <h2 className="text-xl md:text-2xl text-foreground/80 flex items-center">
+              <span className="text-neon-blue mr-2">&gt;</span>
+              <span>{displayText}</span>
+              <span
+                ref={cursorRef}
+                className="inline-block w-[3px] h-[24px] bg-neon-blue ml-1"
+              ></span>
+            </h2>
+          </motion.div>
 
           <motion.p
             className="text-foreground/70 max-w-lg text-lg"
@@ -119,7 +119,7 @@ const Home = () => {
           </motion.p>
 
           <motion.div
-            className="flex flex-wrap gap-4 mt-4"
+            className="flex flex-col sm:flex-row gap-4 mt-4 justify-center lg:justify-start"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.6 }}
@@ -130,7 +130,7 @@ const Home = () => {
               color="primary"
               variant="shadow"
               size="lg"
-              className="h-14 bg-linear-to-t from-sky-500  to-pink-400 border-e-black border-2 font-semibold"
+              className="h-14 bg-linear-to-t from-sky-500 to-pink-400 border-e-black border-2 font-semibold"
               startContent={<Icon icon="lucide:code" />}
               onClick={() => {
                 document
@@ -156,61 +156,17 @@ const Home = () => {
               Contact Me
             </Button>
           </motion.div>
-
-          <motion.div
-            className="flex gap-4 mt-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1.8 }}
-          >
-            {[
-              {
-                icon: 'logos:github-icon',
-                url: 'https://github.com',
-                label: 'GitHub',
-              },
-              {
-                icon: 'logos:linkedin-icon',
-                url: 'https://linkedin.com',
-                label: 'LinkedIn',
-              },
-              {
-                icon: 'logos:twitter',
-                url: 'https://twitter.com',
-                label: 'Twitter',
-              },
-              {
-                icon: 'logos:instagram-icon',
-                url: 'https://instagram.com',
-                label: 'Instagram',
-              },
-            ].map((social) => (
-              <Button
-                key={social.icon}
-                isIconOnly
-                as="a"
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="light"
-                className="bg-content2/50 text-foreground hover:bg-content2 transition-all duration-300"
-                aria-label={social.label}
-              >
-                <Icon icon={social.icon} width={24} height={24} />
-              </Button>
-            ))}
-          </motion.div>
         </motion.div>
 
-        {/* Holographic Photo */}
+        {/* Right: Hologram Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="w-full h-[500px] flex items-center justify-center relative"
+          className="relative flex items-center justify-center w-full h-[300px] sm:h-[400px] md:h-[500px]"
         >
           <div className="absolute inset-0 z-10 flex items-center justify-center">
-            <div className="w-[280px] h-[280px] md:w-[320px] md:h-[320px] rounded-full overflow-hidden border-4 border-neon-blue glow-image relative">
+            <div className="w-[240px] sm:w-[280px] md:w-[320px] h-[240px] sm:h-[280px] md:h-[320px] rounded-full overflow-hidden border-4 border-neon-blue glow-image relative">
               <img
                 src="https://i.ibb.co/TqbgK6jd/tejas.jpg"
                 alt="M TEJAS"

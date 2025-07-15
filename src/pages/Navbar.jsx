@@ -14,6 +14,14 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = ['Home', 'Projects', 'Skills', 'Contact'];
 
+  const handleNavClick = (id) => {
+    setIsMenuOpen(false); // Close menu
+    const el = document.getElementById(id.toLowerCase());
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <>
       <HeroNavbar
@@ -21,7 +29,6 @@ export const Navbar = () => {
         className="fixed top-0 left-0 w-full z-50 h-16 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 backdrop-blur-md bg-opacity-80 shadow-md border-b border-white/10 transition-all duration-300"
         isBlurred={false}
       >
-        {/* Logo / Brand */}
         <NavbarBrand>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -38,7 +45,6 @@ export const Navbar = () => {
           </motion.div>
         </NavbarBrand>
 
-        {/* Desktop Menu */}
         <NavbarContent className="hidden sm:flex gap-6" justify="center">
           {navLinks.map((item, index) => (
             <NavbarItem key={item}>
@@ -49,6 +55,7 @@ export const Navbar = () => {
               >
                 <Link
                   href={`#${item.toLowerCase()}`}
+                  onClick={() => handleNavClick(item)}
                   className="text-white/80 hover:text-white font-medium transition-colors duration-200"
                 >
                   {item}
@@ -58,7 +65,6 @@ export const Navbar = () => {
           ))}
         </NavbarContent>
 
-        {/* Desktop Button - hidden on small devices */}
         <NavbarContent justify="end" className="hidden sm:flex">
           <NavbarItem>
             <motion.div
@@ -84,15 +90,16 @@ export const Navbar = () => {
         <div className="sm:hidden flex items-center ml-auto">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white hover:text-yellow-400 transition-all duration-300"
             aria-label="Toggle Menu"
+            aria-expanded={isMenuOpen}
+            className="text-white hover:text-yellow-400 transition-all duration-300"
           >
             <Icon icon="lucide:menu" width={28} height={28} />
           </button>
         </div>
       </HeroNavbar>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -107,23 +114,12 @@ export const Navbar = () => {
                 <Link
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => handleNavClick(item)}
                   className="text-lg font-medium hover:text-yellow-400 transition-colors"
                 >
                   {item}
                 </Link>
               ))}
-
-              {/* Mobile-only Connect Button */}
-              <Button
-                as={Link}
-                href="#contact"
-                onClick={() => setIsMenuOpen(false)}
-                startContent={<Icon icon="lucide:send" />}
-                className="w-full bg-cyberpunk-gradient font-semibold text-white shadow hover:brightness-110"
-              >
-                Connect
-              </Button>
             </div>
           </motion.div>
         )}

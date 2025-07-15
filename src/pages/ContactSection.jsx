@@ -96,7 +96,8 @@ export const ContactSection = () => {
           {[
             { icon: "lucide:mail", label: "Email", value: "tejas9380@gmail.com", link: "mailto:tejas9380@gmail.com" },
             { icon: "lucide:phone", label: "Phone", value: "+91 9380933460", link: "tel:+919380933460" },
-            { icon: "lucide:map-pin", label: "Location", value: "Tiptur, Karnataka, India", link: null },
+            { icon: "lucide:map-pin", label: "Location", value: "Tiptur, Karnataka, India", link: "https://maps.app.goo.gl/nvFhgaCdKvscsVCM7" },
+
           ].map((item, index) => (
             <div key={index} className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-full bg-[#181818] flex items-center justify-center text-cyan-400">
@@ -114,24 +115,35 @@ export const ContactSection = () => {
           ))}
         </div>
 
-        {/* Social Links */}
-        <div className="mt-8">
-          <h4 className="text-lg font-semibold mb-4 text-cyan-400">Connect on Socials</h4>
-          <div className="flex flex-wrap gap-3">
-            {[
-              { icon: "logos:github-icon", label: "GitHub", link: "https://github.com" },
-              { icon: "logos:linkedin-icon", label: "LinkedIn", link: "https://linkedin.com" },
-              { icon: "logos:twitter", label: "Twitter", link: "https://twitter.com" },
-              { icon: "logos:instagram-icon", label: "Instagram", link: "https://instagram.com" },
-            ].map((social, i) => (
-              <a key={i} href={social.link} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-md bg-[#181818] hover:bg-cyan-500/10 border border-white/10 transition-all text-white text-sm">
-                <Icon icon={social.icon} width={20} height={20} />
-                {social.label}
-              </a>
-            ))}
-          </div>
+        
+        {/* Social Links - Colorful and Stylish */}
+<div className="mt-8">
+  <h4 className="text-lg font-semibold mb-4 text-cyan-400">Connect on Socials</h4>
+  <div className="flex flex-wrap gap-4">
+    {[
+      { icon: "skill-icons:github-dark", label: "GitHub", link: "https://github.com" },
+      { icon: "skill-icons:linkedin", label: "LinkedIn", link: "https://linkedin.com" },
+      { icon: "skill-icons:twitter", label: "Twitter", link: "https://twitter.com" },
+      { icon: "skill-icons:instagram", label: "Instagram", link: "https://instagram.com" },
+    ].map((social, i) => (
+      <a
+        key={i}
+        href={social.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative p-3 rounded-full shadow-md transition-all duration-300 hover:scale-110"
+      >
+        <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-tr from-[#1f1f1f] via-[#2d2d2d] to-[#3b3b3b] border border-white/10 group-hover:shadow-[0_0_20px_var(--tw-shadow-color)] shadow-cyan-500/30">
+          <Icon icon={social.icon} width={28} height={28} />
         </div>
+        <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-gray-300 opacity-0 group-hover:opacity-100 transition duration-300">
+          {social.label}
+        </span>
+      </a>
+    ))}
+  </div>
+</div>
+
 
         {/* Availability */}
         <div className="mt-8 p-4 bg-[#181818] rounded-lg border border-white/10">
