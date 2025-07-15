@@ -61,7 +61,7 @@ const Home = () => {
       id="home"
       className="min-h-screen w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 relative flex items-center justify-center py-20 px-4 overflow-hidden"
     >
-    
+
 
       {/* Backgrounds */}
       <div className="absolute inset-0 bg-cyberpunk-radial opacity-20 z-0" />
@@ -116,9 +116,9 @@ const Home = () => {
             transition={{ duration: 0.5, delay: 1.4 }}
           >
             I’m a passionate Computer Science student with a dream to build something that truly matters.
-Every step I take is rooted in purpose, guided by humility and unstoppable confidence.
-I believe success isn’t just about reaching the top — it’s about lifting others along the way.
-With heart, code, and vision, I’m here to turn dreams into reality.
+            Every step I take is rooted in purpose, guided by humility and unstoppable confidence.
+            I believe success isn’t just about reaching the top — it’s about lifting others along the way.
+            With heart, code, and vision, I’m here to turn dreams into reality.
           </motion.p>
 
           <motion.div
