@@ -171,7 +171,7 @@ const Home = () => {
           <div className="absolute inset-0 z-10 flex items-center justify-center">
             <div className="w-[240px] sm:w-[280px] md:w-[320px] h-[240px] sm:h-[280px] md:h-[320px] rounded-full overflow-hidden border-4 border-neon-blue glow-image relative">
               <img
-                src="https://i.ibb.co/TqbgK6jd/tejas.jpg"
+                src="https://photos.google.com/photo/AF1QipOVnaZ8wYmGwyHQ8B2tH4oub1_ep710Vnr3dHAp"
                 alt="M TEJAS"
                 className="w-full h-full object-cover"
               />
