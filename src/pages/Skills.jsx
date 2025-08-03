@@ -76,7 +76,8 @@ const Skills = () => {
     </div>
 
     {/* Experience Timeline */}
-    <motion.div
+      {/* 
+      <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
@@ -89,7 +90,7 @@ const Skills = () => {
         </h3>
 
         <div className="relative">
-          {/* Center vertical line (desktop only) */}
+          
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-cyan-400 via-purple-500 to-pink-500 z-0"></div>
 
           {[
@@ -126,7 +127,7 @@ const Skills = () => {
               viewport={{ once: true, amount: 0.2 }}
               className={`relative mb-12 flex flex-col md:flex-row md:items-start ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'} z-10`}
             >
-              {/* Vertical Dot */}
+              
               <div className="absolute left-1/2 md:left-1/2 top-2 transform -translate-x-1/2 w-4 h-4 bg-cyan-400 border-2 border-white rounded-full z-20 shadow-md"></div>
 
               <div className={`md:w-5/12 ${index % 2 === 0 ? 'md:text-right md:pr-8' : 'md:pl-8'} w-full`}>
@@ -142,6 +143,7 @@ const Skills = () => {
         </div>
       </div>
     </motion.div>
+    */}
   </div>
 </section>
 

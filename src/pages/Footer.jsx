@@ -24,7 +24,7 @@ const Footer = () => {
               </p>
             </div>
             <p className="text-gray-400 max-w-md mb-4">
-              Crafting cutting-edge digital experiences with performance, accessibility, and futuristic design.
+              YOU BECOME WHAT YOU THINK ABOUT 💕
             </p>
           </div>
 
