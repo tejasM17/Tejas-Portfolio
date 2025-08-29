@@ -25,7 +25,7 @@ const Email = ({ show, onClose }) => {
           <Icon icon="mdi:check-circle" width={32} height={32} className="text-white drop-shadow" />
           <div>
             <h4 className="text-lg font-semibold">Message Sent!</h4>
-            <p className="text-sm text-white/90">Thank you for reaching out Harshita. I’ll connect with you soon 💙</p>
+            <p className="text-sm text-white/90">Thank you for reaching out. I’ll connect with you soon 💙</p>
           </div>
         </motion.div>
       )}
