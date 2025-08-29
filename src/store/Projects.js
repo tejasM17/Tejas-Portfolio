@@ -5,9 +5,15 @@ export const projects = [
     fullDescription:
       "Nebula is an immersive 3D galaxy explorer that allows users to navigate through a procedurally generated universe. Built with Three.js and React, it features realistic celestial physics, interactive star systems, and educational content about astronomy.",
     image: "https://img.heroui.chat/image/ai?w=800&h=600&u=1",
-    technologies: ["React", "Huggingface-API", "Javascript", "Tailwind", "Three.js"],
-    github: "https://github.com/Tejastejas9380/Jeery_web",
-    demo: "https://demo.com",
+    technologies: [
+      "React",
+      "Huggingface-API",
+      "Javascript",
+      "Tailwind",
+      "Three.js",
+    ],
+    github: "https://github.com/tejasM17/ai-frontend",
+    demo: "https://jerrryy.netlify.app/",
     featured: true,
     features: [
       "Procedurally generated galaxy with thousands of stars",
@@ -18,12 +24,12 @@ export const projects = [
     ],
   },
   {
-    title: "Quantum Dashboard",
+    title: "Gurukula PU Collage",
     description:
       "Data visualization dashboard with real-time updates and 3D charts",
     fullDescription:
       "Quantum Dashboard is a cutting-edge data visualization platform designed for monitoring complex systems. It features real-time data updates, interactive 3D charts, and customizable widgets that can be arranged in a flexible grid layout.",
-    image: "https://img.heroui.chat/image/dashboard?w=800&h=600&u=2",
+    image: "https://i.ibb.co/v6PmFMVB/1740112965605.jpg",
     technologies: [
       "React",
       "D3.js",
@@ -31,8 +37,8 @@ export const projects = [
       "WebSockets",
       "Framer Motion",
     ],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    github: "https://github.com/tejasM17/Gurukula_PU_college",
+    demo: "https://sri-gurukula-pu-college.netlify.app/",
     featured: true,
     features: [
       "Real-time data visualization with WebSocket integration",
@@ -50,8 +56,8 @@ export const projects = [
       "Neural Canvas is an AI-powered art generation platform that allows users to create unique digital artwork using advanced neural networks. It features custom style transfer algorithms, interactive editing tools, and a gallery for sharing creations.",
     image: "https://img.heroui.chat/image/ai?w=800&h=600&u=3",
     technologies: ["React", "TensorFlow.js", "WebGL", "Node.js", "Express"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    github: "",
+    demo: "https://work-in-progress-sandy.vercel.app/",
     features: [
       "AI-powered style transfer algorithms",
       "Real-time image processing with WebGL",

@@ -15,10 +15,20 @@ export const Navbar = () => {
   const navLinks = ['Home', 'Projects', 'Skills', 'Contact'];
 
   const handleNavClick = (id) => {
+    const scrollToSection = () => {
+      const el = document.getElementById(id.toLowerCase());
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+
     setIsMenuOpen(false); // Close menu
-    const el = document.getElementById(id.toLowerCase());
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Delay scroll on mobile (when menu was open) to allow animation to complete
+    if (isMenuOpen) {
+      setTimeout(scrollToSection, 300); // Matches the transition duration
+    } else {
+      scrollToSection();
     }
   };
 
@@ -36,11 +46,8 @@ export const Navbar = () => {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-2"
           >
-            
             <Icon className="text-white drop-shadow-[0_0_6px_#00f0ff]"
- 
-            icon="simple-icons:bmw" width="32" height="32" />
-
+              icon="simple-icons:bmw" width="32" height="32" />
           </motion.div>
         </NavbarBrand>
 
@@ -53,8 +60,11 @@ export const Navbar = () => {
                 transition={{ duration: 0.5, delay: 0.1 * index }}
               >
                 <Link
-                  href={`#${item.toLowerCase()}`}
-                  onClick={() => handleNavClick(item)}
+                  href=""
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item);
+                  }}
                   className="text-white/80 hover:text-white font-medium transition-colors duration-200"
                 >
                   {item}
@@ -73,7 +83,11 @@ export const Navbar = () => {
             >
               <Button
                 as={Link}
-                href="#contact"
+                href=""
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick('Contact');
+                }}
                 color="primary"
                 variant="shadow"
                 startContent={<Icon icon="lucide:send" />}
@@ -112,8 +126,11 @@ export const Navbar = () => {
               {navLinks.map((item) => (
                 <Link
                   key={item}
-                  href={`#${item.toLowerCase()}`}
-                  onClick={() => handleNavClick(item)}
+                  href=""
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item);
+                  }}
                   className="text-lg font-medium hover:text-yellow-400 transition-colors"
                 >
                   {item}
