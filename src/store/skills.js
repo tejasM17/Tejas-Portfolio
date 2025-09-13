@@ -14,18 +14,18 @@ export const skills = {
     { name: "MongoDB", level: 80, icon: "logos:mongodb-icon" },
     { name: "PostgreSQL", level: 75, icon: "logos:postgresql" },
   ],
-  "3D & Graphics": [
-    { name: "WebGL", level: 85, icon: "logos:webgl" },
-    { name: "Three.js", level: 90, icon: "logos:threejs" },
-    { name: "GLSL Shaders", level: 82, icon: "logos:webgl" },
-    { name: "Blender", level: 75, icon: "logos:blender" },
-    { name: "Unity", level: 70, icon: "logos:unity" },
-  ],
-  "Tools & Platforms": [
-    { name: "Git", level: 92, icon: "logos:git-icon" },
-    { name: "Docker", level: 80, icon: "logos:docker-icon" },
-    { name: "AWS", level: 78, icon: "logos:aws" },
-    { name: "Figma", level: 85, icon: "logos:figma" },
-    { name: "Vercel", level: 88, icon: "logos:vercel-icon" },
-  ],
+  // "3D & Graphics": [
+  //   { name: "WebGL", level: 85, icon: "logos:webgl" },
+  //   { name: "Three.js", level: 90, icon: "logos:threejs" },
+  //   { name: "GLSL Shaders", level: 82, icon: "logos:webgl" },
+  //   { name: "Blender", level: 75, icon: "logos:blender" },
+  //   { name: "Unity", level: 70, icon: "logos:unity" },
+  // ],
+  // "Tools & Platforms": [
+  //   { name: "Git", level: 92, icon: "logos:git-icon" },
+  //   { name: "Docker", level: 80, icon: "logos:docker-icon" },
+  //   { name: "AWS", level: 78, icon: "logos:aws" },
+  //   { name: "Figma", level: 85, icon: "logos:figma" },
+  //   { name: "Vercel", level: 88, icon: "logos:vercel-icon" },
+  // ],
 };
