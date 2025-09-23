@@ -13,7 +13,7 @@ export const projects = [
       "Three.js",
     ],
     github: "https://github.com/tejasM17/ai-frontend",
-    demo: "https://jerrryy.netlify.app/",
+    demo: "https://jerry-chat-bot.netlify.app/",
     featured: true,
     features: [
       "Procedurally generated galaxy with thousands of stars",
@@ -38,7 +38,7 @@ export const projects = [
       "Framer Motion",
     ],
     github: "https://github.com/tejasM17/Gurukula_PU_college",
-    demo: "https://sri-gurukula-pu-college.netlify.app/",
+    demo: "https://srigirukulapu-collage.netlify.app/",
     featured: true,
     features: [
       "Real-time data visualization with WebSocket integration",
