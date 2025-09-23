@@ -115,7 +115,7 @@ const ProjectSection = () => {
       className="flex justify-center mt-14"
     >
       <a
-        href="https://github.com/Tejastejas9380?tab=repositories"
+        href="https://github.com/tejasM17?tab=repositories"
         target="_blank"
         rel="noopener noreferrer"
         className="px-6 py-3 border border-[#00f0ff] text-[#00f0ff] font-semibold rounded-full hover:bg-[#00f0ff] hover:text-black transition-all duration-300 shadow-[0_0_20px_#00f0ff80]"
