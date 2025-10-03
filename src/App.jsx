@@ -6,6 +6,10 @@ import Skills from "./pages/Skills";
 import ContactSection from "./pages/ContactSection";
 import Footer from "./pages/Footer";
 import Navbar from "./pages/Navbar";
+import { inject } from '@vercel/analytics';
+
+inject();
+
 
 function App() {
   return (
@@ -16,7 +20,7 @@ function App() {
         <main>
           <Home />
           <ProjectSection />
-          
+
           <Skills />
           <ContactSection />
         </main>
