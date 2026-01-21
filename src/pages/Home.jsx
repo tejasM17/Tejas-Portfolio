@@ -115,10 +115,13 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.4 }}
           >
-            I’m a passionate Computer Science student with a dream to build something that truly matters.
-            Every step I take is rooted in purpose, guided by humility and unstoppable confidence.
-            I believe success isn’t just about reaching the top — it’s about lifting others along the way.
-            With heart, code, and vision, I’m here to turn dreams into reality.
+           I’m a passionate Computer Science student and an Android developer who loves building
+            meaningful and impactful technology. I’m deeply interested in open-source projects, Linux, 
+            and full-stack web development, and I enjoy exploring how software can solve real-world problems.
+
+          Every step I take is driven by purpose, guided by humility, and fueled by unstoppable confidence.
+            I believe success isn’t just about reaching the top — it’s about lifting others along the way. 
+            With heart, code, and vision, I’m here to turn ideas into reality and create things that truly matter.
           </motion.p>
 
           <motion.div
