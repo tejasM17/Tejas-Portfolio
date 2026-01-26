@@ -12,8 +12,8 @@ export const projects = [
       "Tailwind",
       "Three.js",
     ],
-    github: "https://github.com/tejasM17/ai-frontend",
-    demo: "https://jerry-chat-bot.netlify.app/",
+    github: "https://github.com/tejasM17/jerry-ai",
+    demo: "https://tejasm17.github.io/jerry-ai/",
     featured: true,
     features: [
       "Procedurally generated galaxy with thousands of stars",
@@ -37,7 +37,7 @@ export const projects = [
       "WebSockets",
       "Framer Motion",
     ],
-    github: "https://github.com/tejasM17/Gurukula_PU_college",
+    github: "https://github.com/tejasM17/Sri-Gurukula_pu_collage",
     demo: "https://srigirukulapu-collage.netlify.app/",
     featured: true,
     features: [
@@ -49,23 +49,25 @@ export const projects = [
     ],
   },
   {
-    title: "Neural Canvas",
-    description:
-      "AI-powered art generation platform with custom style transfer algorithms",
-    fullDescription:
-      "Neural Canvas is an AI-powered art generation platform that allows users to create unique digital artwork using advanced neural networks. It features custom style transfer algorithms, interactive editing tools, and a gallery for sharing creations.",
-    image: "https://img.heroui.chat/image/ai?w=800&h=600&u=3",
-    technologies: ["React", "TensorFlow.js", "WebGL", "Node.js", "Express"],
-    github: "",
-    demo: "https://work-in-progress-sandy.vercel.app/",
-    features: [
-      "AI-powered style transfer algorithms",
-      "Real-time image processing with WebGL",
-      "User gallery for sharing and discovering artwork",
-      "Custom brush tools for fine-tuning generated art",
-      "Optimized for both desktop and mobile devices",
-    ],
-  },
+  title: "Aura App",
+  description:
+    "Mobile AI art generation app with powerful style transfer running on-device",
+  fullDescription:
+    "Aura AI is an Android application that lets you create stunning digital artwork using advanced AI style transfer directly on your phone. Built with Kotlin and powered by Firebase for authentication, storage, and sharing features. Generate art, apply custom styles, edit in real-time, and share your creations with the community — all with a smooth, native experience.",
+  image: "https://img.heroui.chat/image/ai?w=800&h=600&u=3",  
+  technologies: ["Kotlin", "Firebase", "Jetpack Compose", "Material 3"],  
+  github: "https://github.com/tejasM17/AURA",
+  demo: "https://github.com/tejasM17/mainaura/releases/download/v1.0.0/AURA.apk",  
+  features: [
+    "On-device AI-powered style transfer",
+    "Real-time preview and processing",
+    "Offline support for cached models/styles",
+    "Firebase authentication & cloud gallery",
+    "Share creations via social media or direct link",
+    "Modern Material 3 UI with smooth animations",
+    "Customizable brushes and editing tools",
+  ],
+}
   // {
   //   title: "Cyberpunk City Generator",
   //   description:
