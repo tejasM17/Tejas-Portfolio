@@ -1,22 +1,22 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { Button } from '@heroui/react';
-import { Icon } from '@iconify/react';
-import HologramEffect from './HologramEffect';
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { Button } from "@heroui/react";
+import { Icon } from "@iconify/react";
+import HologramEffect from "./HologramEffect";
 
 const Home = () => {
-  const [displayText, setDisplayText] = useState('');
+  const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
   const cursorRef = useRef(null);
 
   const roles = [
-    'Python Developer',
-    'Fullstack Developer',
-    'App Development',
-    'UI/UX Engineer',
-    'Entrepreneur',
+    "Python Developer",
+    "Fullstack Developer",
+    "App Development",
+    "UI/UX Engineer",
+    "Entrepreneur",
   ];
 
   const currentRole = roles[loopNum % roles.length];
@@ -27,7 +27,7 @@ const Home = () => {
       setDisplayText((prev) =>
         isDeleting
           ? fullText.substring(0, prev.length - 1)
-          : fullText.substring(0, prev.length + 1)
+          : fullText.substring(0, prev.length + 1),
       );
 
       setTypingSpeed(isDeleting ? 50 : 150);
@@ -35,7 +35,7 @@ const Home = () => {
       if (!isDeleting && displayText === fullText) {
         setTypingSpeed(2000);
         setIsDeleting(true);
-      } else if (isDeleting && displayText === '') {
+      } else if (isDeleting && displayText === "") {
         setIsDeleting(false);
         setLoopNum((prev) => prev + 1);
         setTypingSpeed(150);
@@ -50,7 +50,7 @@ const Home = () => {
     const blink = setInterval(() => {
       if (cursorRef.current) {
         cursorRef.current.style.opacity =
-          cursorRef.current.style.opacity === '0' ? '1' : '0';
+          cursorRef.current.style.opacity === "0" ? "1" : "0";
       }
     }, 500);
     return () => clearInterval(blink);
@@ -61,8 +61,6 @@ const Home = () => {
       id="home"
       className="min-h-screen w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 relative flex items-center justify-center py-20 px-4 overflow-hidden"
     >
-
-
       {/* Backgrounds */}
       <div className="absolute inset-0 bg-cyberpunk-radial opacity-20 z-0" />
       <div className="absolute inset-0 noise-bg z-0" />
@@ -115,13 +113,17 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.4 }}
           >
-           I’m a passionate Computer Science student and an Android developer who loves building
-            meaningful and impactful technology. I’m deeply interested in open-source projects, Linux, 
-            and full-stack web development, and I enjoy exploring how software can solve real-world problems.
-
-          Every step I take is driven by purpose, guided by humility, and fueled by unstoppable confidence.
-            I believe success isn’t just about reaching the top — it’s about lifting others along the way. 
-            With heart, code, and vision, I’m here to turn ideas into reality and create things that truly matter.
+            I’m a passionate Computer Science student and an Android developer
+            who loves building meaningful and impactful technology. I’m deeply
+            interested in open-source projects, Linux, and full-stack web
+            development, and I enjoy exploring how software can solve real-world
+            problems.
+            <br />
+            Every step I take is driven by purpose, guided by humility, and
+            fueled by unstoppable confidence. I believe success isn’t just about
+            reaching the top — it’s about lifting others along the way. With
+            heart, code, and vision, I’m here to turn ideas into reality and
+            create things that truly matter.
           </motion.p>
 
           <motion.div
@@ -140,8 +142,8 @@ const Home = () => {
               startContent={<Icon icon="lucide:code" />}
               onClick={() => {
                 document
-                  .getElementById('projects')
-                  ?.scrollIntoView({ behavior: 'smooth' });
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               View My Work
@@ -155,8 +157,8 @@ const Home = () => {
               startContent={<Icon icon="lucide:mail" />}
               onClick={() => {
                 document
-                  .getElementById('contact')
-                  ?.scrollIntoView({ behavior: 'smooth' });
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               Contact Me
@@ -194,7 +196,7 @@ const Home = () => {
           duration: 0.5,
           delay: 2,
           repeat: Infinity,
-          repeatType: 'reverse',
+          repeatType: "reverse",
           repeatDelay: 1,
         }}
       >
