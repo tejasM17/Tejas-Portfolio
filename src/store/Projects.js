@@ -12,8 +12,8 @@ export const projects = [
       "Tailwind",
       "Three.js",
     ],
-    github: "https://github.com/tejasM17/jerry-ai",
-    demo: "https://tejasm17.github.io/jerry-ai/",
+    github: "https://github.com/tejasM17/jerry",
+    demo: "https://jerry-alpha.vercel.app/",
     featured: true,
     features: [
       "Procedurally generated galaxy with thousands of stars",
