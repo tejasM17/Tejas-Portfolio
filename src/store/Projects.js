@@ -74,6 +74,7 @@ export const projects = [
       "A smart platform connecting patients with nearby doctors and managing digital health records",
     fullDescription:
        "Med-Link is a healthcare platform that bridges the gap between patients and doctors by enabling secure digital health record storage, real-time doctor discovery, and seamless appointment booking. Patients can upload and manage medical reports, while doctors can access patient history, provide digital prescriptions, and manage appointments efficiently. The system improves consultation speed, accessibility, and overall healthcare experience.",    image: "https://ibb.co/rffVSCKJ",
+    image: "https://ibb.co/rffVSCKJ",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Firebase", "Tailwind CSS", "Google Maps API"],
     github: "https://github.com/tejasM17/Rajeev-event-2026-",
     features: [
