@@ -68,24 +68,23 @@ export const projects = [
     "Customizable brushes and editing tools",
   ],
 }
-  // {
-  //   title: "Cyberpunk City Generator",
-  //   description:
-  //     "Procedural 3D city generator with customizable architecture styles",
-  //   fullDescription:
-  //     "The Cyberpunk City Generator creates immersive 3D urban environments with procedurally generated buildings, streets, and infrastructure. Users can customize architectural styles, lighting, weather effects, and export their creations for use in games or visualizations.",
-  //   image: "https://img.heroui.chat/image/ai?w=800&h=600&u=4",
-  //   technologies: ["Three.js", "React", "TypeScript", "WebWorkers", "GLSL"],
-  //   github: "https://github.com",
-  //   demo: "https://demo.com",
-  //   features: [
-  //     "Procedural generation of buildings, streets, and infrastructure",
-  //     "Customizable architectural styles and city layouts",
-  //     "Dynamic lighting and weather effects",
-  //     "Exportable 3D models for use in other applications",
-  //     "Optimized rendering with level-of-detail techniques",
-  //   ],
-  // },
+  {
+    title: "Med-Link",
+    description:
+      "A smart platform connecting patients with nearby doctors and managing digital health records",
+    fullDescription:
+       "Med-Link is a healthcare platform that bridges the gap between patients and doctors by enabling secure digital health record storage, real-time doctor discovery, and seamless appointment booking. Patients can upload and manage medical reports, while doctors can access patient history, provide digital prescriptions, and manage appointments efficiently. The system improves consultation speed, accessibility, and overall healthcare experience.",    image: "https://ibb.co/rffVSCKJ",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Firebase", "Tailwind CSS", "Google Maps API"],
+    github: "https://github.com/tejasM17/Rajeev-event-2026-",
+    features: [
+    "Secure digital storage of medical reports, prescriptions, and lab results",
+    "Health timeline for easy visualization of patient medical history",
+    "Location-based doctor discovery with specialization and filtering",
+    "Online appointment booking and management system",
+    "Doctor dashboard to view patient history and write digital prescriptions",
+    "Real-time notifications for appointments and prescriptions",
+    ],
+  },
   // {
   //   title: "Sonic Architect",
   //   description: "Web-based music production studio with 3D visualization",
