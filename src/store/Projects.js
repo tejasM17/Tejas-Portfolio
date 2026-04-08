@@ -67,7 +67,7 @@ export const projects = [
     "Modern Material 3 UI with smooth animations",
     "Customizable brushes and editing tools",
   ],
-}
+},
   {
     title: "Med-Link",
     description:
