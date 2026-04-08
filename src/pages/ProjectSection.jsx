@@ -123,13 +123,15 @@ const ProjectSection = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="flex justify-center mt-14"
         >
-          <Link
-            to="/viewallprojects" // ← this is the path you'll define in <Routes>
-            className="px-6 py-3 border border-[#00f0ff] text-[#00f0ff] font-semibold rounded-full hover:bg-[#00f0ff] hover:text-black transition-all duration-300 shadow-[0_0_20px_#00f0ff80] inline-flex items-center gap-2"
-          >
-            <Icon icon="lucide:view" />
-            View All Projects
-          </Link>
+          <a
+  href="https://github.com/tejasM17?tab=repositories"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-6 py-3 border border-[#00f0ff] text-[#00f0ff] font-semibold rounded-full hover:bg-[#00f0ff] hover:text-black transition-all duration-300 shadow-[0_0_20px_#00f0ff80] inline-flex items-center gap-2"
+>
+  <Icon icon="lucide:view" />
+  View All Projects
+</a>
         </motion.div>
       </div>
 
