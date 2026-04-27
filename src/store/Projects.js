@@ -57,7 +57,7 @@ export const projects = [
   image: "https://img.heroui.chat/image/ai?w=800&h=600&u=3",  
   technologies: ["Kotlin", "Firebase", "Jetpack Compose", "Material 3"],  
   github: "https://github.com/tejasM17/AURA",
-  demo: "https://github.com/tejasM17/AURA/releases/download/new/AURA.apk",  
+  demo: "https://github.com/tejasM17/AURA/releases/download/V.1.0.11/AURA.apk",  
   features: [
     "On-device AI-powered style transfer",
     "Real-time preview and processing",
