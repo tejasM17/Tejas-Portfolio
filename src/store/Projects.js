@@ -77,6 +77,7 @@ export const projects = [
     image: "https://i.ibb.co/XkkqghfT/Screenshot-2026-04-08-211523.png",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Firebase", "Tailwind CSS", "Google Maps API"],
     github: "https://github.com/tejasM17/Rajeev-event-2026-",
+    demo: "https://rajeev-event-2026.vercel.app/",
     features: [
     "Secure digital storage of medical reports, prescriptions, and lab results",
     "Health timeline for easy visualization of patient medical history",
