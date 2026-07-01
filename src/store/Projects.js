@@ -87,29 +87,54 @@ export const projects = [
     "Real-time notifications for appointments and prescriptions",
     ],
   },
-  // {
-  //   title: "Sonic Architect",
-  //   description: "Web-based music production studio with 3D visualization",
-  //   fullDescription:
-  //     "Sonic Architect is a web-based music production studio that combines traditional audio tools with innovative 3D visualizations. It features a full suite of virtual instruments, effects processors, and a unique 3D interface for manipulating sound in three-dimensional space.",
-  //   image: "https://img.heroui.chat/image/ai?w=800&h=600&u=5",
-  //   technologies: [
-  //     "Web Audio API",
-  //     "Three.js",
-  //     "React",
-  //     "TypeScript",
-  //     "Tone.js",
-  //   ],
-  //   github: "https://github.com",
-  //   demo: "https://demo.com",
-  //   features: [
-  //     "Full suite of virtual instruments and effects",
-  //     "3D visualization of audio waveforms and frequencies",
-  //     "Spatial audio manipulation in three-dimensional space",
-  //     "Real-time collaboration with other musicians",
-  //     "Export in multiple audio formats",
-  //   ],
-  // },
+  {
+  title: "VERIF AI",
+
+  description:
+    "AI-powered academic profile verification platform for students and recruiters.",
+
+  fullDescription:
+    "VERIF AI is an intelligent verification platform that analyzes resumes, certificates, GitHub profiles, and online evidence using multiple AI agents. It generates a transparent trust score with live research logs, helping recruiters discover verified talent while enabling students to build trusted professional profiles. The platform uses LangGraph for multi-agent orchestration, Gemini for AI reasoning, Firebase Authentication, MongoDB GridFS for document storage, and FastAPI for scalable backend services.",
+
+  image: "https://i.ibb.co/ym4XbGs1/verif-ai.png",
+
+  technologies: [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "FastAPI",
+    "Python",
+    "Firebase Authentication",
+    "Firestore",
+    "MongoDB GridFS",
+    "LangGraph",
+    "LangChain",
+    "Google Gemini",
+    "GitHub API",
+    "Docker"
+  ],
+
+  github: "https://github.com/tejasM17/verif-ai-backend",
+
+  demo: "https://verifai-frontend-2uug.onrender.com",
+
+  features: [
+    "AI-powered resume verification",
+    "Certificate authenticity analysis",
+    "GitHub profile and repository evaluation",
+    "Multi-agent verification using LangGraph",
+    "Live AI research logs during verification",
+    "Transparent Trust Score generation",
+    "Student and Recruiter role-based authentication",
+    "Firebase Email, Google, and GitHub authentication",
+    "Recruiter talent discovery with advanced filtering",
+    "Public verified student profiles",
+    "Document storage using MongoDB GridFS",
+    "FastAPI backend with scalable REST APIs",
+    "Responsive modern dashboard",
+    "Secure JWT and Firebase token verification"
+  ]
+}
   // {
   //   title: "Holographic UI Kit",
   //   description:
