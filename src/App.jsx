@@ -14,13 +14,12 @@ inject();
 function App() {
   return (
     <>
-      <div className="min-h-screen w-full bg-background text-foreground overflow-hidden dark">
+      <div className="min-h-screen w-full bg-[#0a0a0f] text-white overflow-hidden dark">
         <Navbar />
 
         <main>
           <Home />
           <ProjectSection />
-
           <Skills />
           <ContactSection />
         </main>

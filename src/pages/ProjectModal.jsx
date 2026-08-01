@@ -5,10 +5,10 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
   if (!isOpen || !project) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/100 backdrop-blur-sm">
-      <div className="bg-content3 border border-white/10 text-foreground rounded-2xl w-full max-w-3xl shadow-neuro relative overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+      <div className="bg-[#1f1f1f] border border-white/10 text-white rounded-2xl w-full max-w-3xl shadow-[0_0_30px_rgba(0,255,255,0.05)] relative overflow-hidden">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-content2">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#181818]">
           <h2 className="text-2xl font-bold">{project.title}</h2>
           <button onClick={onClose} className="text-white hover:text-red-500">
             <Icon icon="lucide:x" className="w-6 h-6" />
@@ -58,7 +58,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
         </div>
 
         {/* Footer */}
-        <div className="flex justify-end items-center gap-4 px-6 py-4 border-t border-white/10 bg-content2">
+        <div className="flex justify-end items-center gap-4 px-6 py-4 border-t border-white/10 bg-[#181818]">
           <button
             onClick={onClose}
             className="px-4 py-2 rounded-lg text-white bg-white/10 hover:bg-white/20 transition"

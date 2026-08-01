@@ -86,7 +86,7 @@ export const ContactSection = () => {
     <section id="contact" className="py-20 px-4 relative overflow-hidden bg-[#0a0a0f]">
       {/* Rainbow Glow Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-pink-500/10 via-indigo-500/5 to-transparent z-0"></div>
-      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 z-0"></div>
+      <div className="absolute inset-0 noise-bg z-0"></div>
 
       <EmailSentNotification show={showNotification} onClose={() => setShowNotification(false)} />
 
@@ -108,14 +108,14 @@ export const ContactSection = () => {
         </motion.div>
 
         {/* Contact Form & Info */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.2 }}
-            className="bg-[#121212] p-8 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,255,255,0.05)] backdrop-blur-md"
+            className="bg-[#121212] p-5 sm:p-6 md:p-8 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,255,255,0.05)] backdrop-blur-md min-w-0 overflow-hidden"
           >
             <h3 className="text-2xl font-bold text-cyan-400 mb-6">Send Me a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -157,7 +157,7 @@ export const ContactSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true, amount: 0.2 }}
-            className="bg-[#121212] p-8 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,255,255,0.05)] backdrop-blur-md"
+            className="bg-[#121212] p-5 sm:p-6 md:p-8 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,255,255,0.05)] backdrop-blur-md min-w-0 overflow-hidden"
           >
             <h3 className="text-2xl font-bold text-cyan-400 mb-6">Contact Information</h3>
 

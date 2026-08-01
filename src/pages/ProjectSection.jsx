@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import ProjectModal from "./ProjectModal"; // Ensure this file exists and is default exported
 import { projects } from "../store/Projects"; // Ensure this file exists and is properly structured
-import { Link } from "react-router-dom";
 
 const ProjectSection = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -15,7 +14,7 @@ const ProjectSection = () => {
     >
       {/* Background elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent z-0"></div>
-      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 z-0"></div>
+      <div className="absolute inset-0 noise-bg z-0"></div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Title Section */}
@@ -124,14 +123,14 @@ const ProjectSection = () => {
           className="flex justify-center mt-14"
         >
           <a
-  href="https://github.com/tejasM17?tab=repositories"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="px-6 py-3 border border-[#00f0ff] text-[#00f0ff] font-semibold rounded-full hover:bg-[#00f0ff] hover:text-black transition-all duration-300 shadow-[0_0_20px_#00f0ff80] inline-flex items-center gap-2"
->
-  <Icon icon="lucide:view" />
-  View All Projects
-</a>
+            href="https://github.com/tejasM17?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 border border-[#00f0ff] text-[#00f0ff] font-semibold rounded-full hover:bg-[#00f0ff] hover:text-black transition-all duration-300 shadow-[0_0_20px_#00f0ff80] inline-flex items-center gap-2"
+          >
+            <Icon icon="lucide:github" />
+            View All Projects
+          </a>
         </motion.div>
       </div>
 

@@ -10,7 +10,7 @@ const Skills = () => {
     <section id="skills" className="py-20 px-4 relative overflow-hidden bg-[#0a0a0f]">
   {/* Background elements */}
   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent z-0"></div>
-  <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 z-0"></div>
+  <div className="absolute inset-0 noise-bg z-0"></div>
 
   <div className="container mx-auto max-w-7xl z-10 relative">
     {/* Section Header */}
@@ -30,7 +30,7 @@ const Skills = () => {
     </motion.div>
 
     {/* Skills Grid */}
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
       {categories.map((category, categoryIndex) => (
         <motion.div
           key={category}

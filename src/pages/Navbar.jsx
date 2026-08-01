@@ -91,7 +91,7 @@ export const Navbar = () => {
                 color="primary"
                 variant="shadow"
                 startContent={<Icon icon="lucide:send" />}
-                className="bg-cyberpunk-gradient hover:brightness-110 font-semibold text-white shadow-lg"
+                className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 hover:brightness-110 font-semibold text-white shadow-lg"
               >
                 Connect
               </Button>

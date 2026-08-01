@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="py-16 px-4 bg-[#0a0a0f] border-t border-white/10 relative">
       {/* Noise + Glow Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-pink-500/5 via-indigo-500/5 to-transparent z-0"></div>
-      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 z-0"></div>
+      <div className="absolute inset-0 noise-bg z-0"></div>
 
       <div className="container mx-auto max-w-7xl z-10 relative">
         {/* Top Grid */}
@@ -19,7 +19,7 @@ const Footer = () => {
               <div className="w-9 h-9 bg-gradient-to-tr from-cyan-400 via-purple-500 to-pink-500 rounded-md flex items-center justify-center">
                 <span className="font-bold text-black text-lg">&lt;/&gt;</span>
               </div>
-              <p className="font-bold text-2xl bg-gradient-to-r from-[#00f0ff] via-[#ff00ff] to-[#ff9900] text-transparent bg-clip-text animate-gradient bg-[length:400%_400%]">
+              <p className="font-bold text-2xl bg-gradient-to-r from-[#00f0ff] via-[#ff00ff] to-[#ff9900] text-transparent bg-clip-text bg-[length:400%_400%]">
                 M TEJAS
               </p>
             </div>
