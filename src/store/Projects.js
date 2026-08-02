@@ -13,7 +13,7 @@ export const projects = [
       "Three.js",
     ],
     github: "https://github.com/tejasM17/jerry",
-    demo: "https://jerry-alpha.vercel.app/",
+    demo: "https://jerry-dun.vercel.app/",
     featured: true,
     features: [
       "Procedurally generated galaxy with thousands of stars",
